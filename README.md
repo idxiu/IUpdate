@@ -18,7 +18,7 @@ init 1.0
         final IUpdateApi updateApi = new IUpdateApi
                 .Builder()
                 .setDebugMode(false)    //是否显示调试信息(可选,默认:false)
-                //  .setUpdateBean(updateBean) //设置通过其他途径得到的XdUpdateBean(2选1)
+              //.setUpdateBean(updateBean) //设置通过其他途径得到的IUpdateBean(2选1)
                 .setJsonUrl("http://192.168.8.103:8080/a/a.xml")   //JSON文件的URL(2选1)
                 .setShowDialogIfWifi(true)  //设置在WiFi下直接弹出AlertDialog而不使用Notification(可选,默认:false)
                 .setDownloadText("立即下载")    //可选,默认为左侧所示的文本
