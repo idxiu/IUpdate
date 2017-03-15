@@ -1,6 +1,6 @@
 # IUpdate 安卓自动检测更新工具
 init 1.0
-##1.准备描述更新信息的JSON文件
+## 1.准备描述更新信息的JSON文件
 ```
   {
   "versionCode":4,                          //新版本的versionCode,int型
@@ -11,7 +11,7 @@ init 1.0
   "size":17962350                           //大小(字节),int型
   }
 ```
-##2.构建IUpdateApi对象
+## 2.构建IUpdateApi对象
 ```
         //注册事件
         EventBusUtils.register(this);
@@ -29,7 +29,7 @@ init 1.0
                 .setIconResId(R.mipmap.ic_launcher) //设置在通知栏显示的通知图标资源ID(可选,默认为应用图标)
                 .build();
 ```
-##3.检查更新
+## 3.检查更新
 ```
   if (IUpdateUtils.isConnected(activity)) {
           updateApi.update(activity);
@@ -55,14 +55,14 @@ init 1.0
 ```
 适用于应用“设置”页面的手动检查更新。此方法无视上面的 2 条默认策略，如果有更新，总是对用户进行提示，且总是使用提示框 (AlertDialog) 的形式。
 
-##4.若不想使用JSON文件，可传入由其他途径得到的IUpdateBean 
+## 4.若不想使用JSON文件，可传入由其他途径得到的IUpdateBean 
 ```
   IUpdateApi.Builder.setUpdateBean(IUpdateApi updateBean);
 ```
 可使用第三方推送服务的自定义消息/透传功能，接收到服务端推送过来的JSON(String)后，解析成一个XdUpdateBean，传入上述方法，即可使用推送带过来的JSON进行更新提示。
 
 注意不是普通消息，这样会直接在通知栏上显示内容，不会进到自定义的代码处理块。
-##5.更新监听：
+## 5.更新监听：
 
 ```
     //订阅事件
