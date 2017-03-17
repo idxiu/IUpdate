@@ -99,8 +99,7 @@ init 1.0
                         Log.e("aaaaaaaaaaaa","下载失败");
                         break;
                 }
-
-                break;
+ 
         }
     }
   ```
