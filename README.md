@@ -59,7 +59,7 @@ init 1.0
 ```
   IUpdateApi.Builder.setUpdateBean(IUpdateApi updateBean);
 ```
-可使用第三方推送服务的自定义消息/透传功能，接收到服务端推送过来的JSON(String)后，解析成一个XdUpdateBean，传入上述方法，即可使用推送带过来的JSON进行更新提示。
+可使用第三方推送服务的自定义消息/透传功能，接收到服务端推送过来的JSON(String)后，解析成一个IUpdateBean，传入上述方法，即可使用推送带过来的JSON进行更新提示。
 
 注意不是普通消息，这样会直接在通知栏上显示内容，不会进到自定义的代码处理块。
 ## 5.更新监听：
